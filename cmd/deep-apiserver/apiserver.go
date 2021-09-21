@@ -4,6 +4,7 @@
 package main
 
 import (
+	"github.com/RaulZuo/deep-process/internal/apiserver"
 	"math/rand"
 	"os"
 	"runtime"
@@ -16,5 +17,5 @@ func main() {
 		runtime.GOMAXPROCS(runtime.NumCPU())
 	}
 
-	//apiserver.NewApp("deep-apiserver").Run()
+	apiserver.NewApp("deep-apiserver").Run()
 }
