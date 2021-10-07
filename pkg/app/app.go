@@ -134,7 +134,6 @@ func (a *App) buildCommand() {
 			return nil
 		})
 	}
-
 	if !a.noVersion {
 		verflag.AddFlags(namedFlagSets.FlagSet("global"))
 	}

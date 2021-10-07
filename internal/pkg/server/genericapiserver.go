@@ -3,7 +3,6 @@ package server
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/marmotedu/component-base/pkg/core"
-	"github.com/marmotedu/log"
 	"net/http"
 	"time"
 )
@@ -75,7 +74,8 @@ func (s *GenericAPIServer) InstallAPIs() {
 func (s *GenericAPIServer) Setup() {
 	gin.SetMode(s.mode)
 	gin.DebugPrintRouteFunc = func(httpMethod, absolutePath, handlerName string, nuHandlers int) {
-		log.Infof("%-6s %-s --> %s (%d handlers)", httpMethod, absolutePath, handlerName, nuHandlers)
+		// TODO
+		//log.Infof("%-6s %-s --> %s (%d handlers)", httpMethod, absolutePath, handlerName, nuHandlers)
 	}
 }
 

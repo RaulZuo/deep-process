@@ -15,6 +15,11 @@ const configFlagName = "config"
 
 var cfgFile string
 
+func init() {
+	pflag.StringVarP(&cfgFile, "config", "c", cfgFile, "Read configuration from specified `FILE`, " +
+		"support JSON, TOML, YAML, HCL, or Java properties formats.")
+}
+
 // addConfigFlag adds flags for a specific server to the specified FlagSet object.
 func addConfigFlag(basename string, fs *pflag.FlagSet) {
 	fs.AddFlag(pflag.Lookup(configFlagName))
